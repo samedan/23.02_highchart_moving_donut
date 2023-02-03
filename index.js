@@ -33,13 +33,13 @@ function getSubtitle() {
 }
 
 (async () => {
-  dataset = await fetch(
-    "https://cdn.jsdelivr.net/gh/highcharts/highcharts@88f2067/samples/data/nuclear-energy-production.json"
-  ).then((response) => response.json());
+  dataset = await fetch("nuclear-energy-production.json").then((response) =>
+    response.json()
+  );
 
   chart = Highcharts.chart("container", {
     title: {
-      text: "Nuclear enegery production from 1965 to 2021 in US, UK, France, Germany, and Japan",
+      text: "Nuclear energy production from 1965 to 2021 in US, UK, France, Germany, and Japan",
       align: "center",
     },
     subtitle: {
